@@ -13,13 +13,17 @@ public class LlenarNumeros {
 
 	public static int[] llenar(int n) {
 		int[] tabla = new int[n];
-		for (int i = 0; i < tabla.length; i++) {
-			tabla[i] = i*10;		
-		}
+		todosPorN(tabla, 10);
 		return tabla;
 	} //Llenar tabla
-	
-	
+
+	private static void todosPorN(int[] tabla, int n) {
+		for (int i = 0; i < tabla.length; i++) {
+			tabla[i] = i* n;
+		}
+	}
+
+
 	public static int sumar(int[] tabla) {
 		int suma = 0;
 		for (int j : tabla) {
